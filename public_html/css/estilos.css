@@ -1,0 +1,74 @@
+/*******************************************************************************
+* @author:marcosptf@yahoo.com.br
+* @since:19/09/2013
+* @desc:definições das propriedades usadas no game
+********************************************************************************/
+.layout{
+	border:1px solid #000;
+	width:600px;
+	height:500px;
+	position:relative;
+	top:25px;
+}
+.layout1{
+	
+}
+.layout2{
+	
+}
+
+.pointerCSS{
+	cursor:url(smiley.gif),url(myBall.cur),auto;
+}
+
+.subTela1{
+	position:relative;
+	top:0px;
+	border:1px solid #000;
+	width:180px;
+	height:400px;
+}
+.subTela2{
+	position:relative;
+	top:-402px;
+	float:right;
+	border:1px solid #000;
+	width:415px;
+	height:400px;
+}
+.grade0 tr td{
+	width :600px;
+	height:188px;
+}
+.grade1 tr td{
+	width :500px;
+	height:93px;
+}
+.grade2 tr td{
+	width :500px;
+	height:93px;
+}
+.grade3 tr td{
+	width :500px;
+	height:93px;
+}
+.grade4 tr td{
+	width :500px;
+	height:93px;
+}
+.grade5 tr td{
+	text-align:center;
+	width :40px;
+	height:19px;
+}
+.grade6 tr td{
+	text-align:center;
+	width :40px;
+	height:19px;
+}
+.subTela3{
+	position:relative;
+	border:1px solid #000;
+	width:600px;
+	height:98px;
+}
