@@ -439,6 +439,13 @@ and open the template in the editor.
                     6.deve ser desenvolvido função para calculo de tempo para passar cada fase de grade.
                     7.deve desenvolver funcao inteligente para gerenciar quando acabar uma fase e passar para a fase seguinte;
                     */
+					
+                    //YUI().use("node",function(YHtml){
+                    //    YHtml.one("#idFase").setHTML("jsDebugger => Fase=>"+faseGradeJogador+" Temp=>"+temporizadorGame+" QtdePontos=>"+qtdePontosJogador);
+                    //});					
+					document.getElementById("idFase").innerHTML = " Fase=>"+faseGradeJogador+" Tempo=>"+temporizadorGame+"  Pontos=>"+pontosJogador;
+						console.debug("jsDebugger => Fase=>"+faseGradeJogador+" Temp=>"+temporizadorGame+" QtdePontos=>"+pontosJogador);
+					
                     if(
                             (faseGradeJogador===0) && (temporizadorGame===5) ||
                             (faseGradeJogador===1) && (temporizadorGame===10) ||
@@ -453,7 +460,7 @@ and open the template in the editor.
                         temporizadorGame = 0;
                         qtdePontosJogador= 0;
                     }
-                    
+						
                     if(faseGradeJogador===0){
                         grade6.setStyle("display","none");
                         grade0.setStyle("display","block");
@@ -567,7 +574,7 @@ and open the template in the editor.
                 </div>
                 
                 <div class="subTela2">
-                    sub tela 2 - subtela do jogo - fase =><span id="idFase"></span>                
+                    sub tela 2 - subtela do jogo -<span id="idFase"></span>                
                     
                     <table border="1" cellspacing="0" cellpadding="0" id="grade0" style="display:none;" class="grade0">
                         <tr>
