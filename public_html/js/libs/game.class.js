@@ -106,12 +106,18 @@
                     });
                 }
 
-                if(qtdePontosJogador===qtdeImg[faseGradeJogador]){
-                    tempJogo=window.clearInterval(tempJogo);
+                if((qtdePontosJogador === qtdeImg[faseGradeJogador]) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 1)) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 1))){
+                    tempJogo = window.clearInterval(tempJogo);
+					msg1     = "jogador finalizou o jogo! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame;
+					msg2     = "jogador finalizou a fase! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame;
+					
                     if(faseGradeJogador===5){
-                        console.log("jogador finalizou o jogo! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame);
+                        console.log(msg1);
+                        alert(msg1);
+						exibeCarrossel();
                     }else{
-                        console.log("jogador finalizou a fase! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame);
+                        console.log(msg2);
+                        alert(msg2);
                         faseGradeJogador++;
                         temporizadorGame = 0;
                         qtdePontosJogador= 0;
