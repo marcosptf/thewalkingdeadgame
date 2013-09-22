@@ -106,22 +106,28 @@
                     });
                 }
 
-                if((qtdePontosJogador === qtdeImg[faseGradeJogador]) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 1)) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 1))){
+                if((qtdePontosJogador === qtdeImg[faseGradeJogador]) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 1)) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 2)) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 3))){
                     tempJogo = window.clearInterval(tempJogo);
 					msg1     = "jogador finalizou o jogo! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame;
 					msg2     = "jogador finalizou a fase! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame;
 					
-                    if(faseGradeJogador===5){
+					if(
+						(faseGradeJogador===0 && pontosJogador>= 30) ||
+						(faseGradeJogador===1 && pontosJogador>= 100) ||
+						(faseGradeJogador===2 && pontosJogador>= 250) ||
+						(faseGradeJogador===3 && pontosJogador>= 480) ||
+						(faseGradeJogador===4 && pontosJogador>= 800)
+					   ){
+						console.log(msg2);
+						alert(msg2);
+						faseGradeJogador++;
+						temporizadorGame = 0;
+						qtdePontosJogador= 0;
+						iniciaJogo();
+					}else if(faseGradeJogador===5 && pontosJogador>= 2600){
                         console.log(msg1);
                         alert(msg1);
 						exibeCarrossel();
-                    }else{
-                        console.log(msg2);
-                        alert(msg2);
-                        faseGradeJogador++;
-                        temporizadorGame = 0;
-                        qtdePontosJogador= 0;
-                        iniciaJogo();
-                    }
+					}
                 }
             }
