@@ -8,6 +8,7 @@
                     YUI().use("node",function(Y){
                         imgZumbiAtual = pzbImg;
                         for(var x=1;x<=pQtdeImg;x++){Y.one("#grade"+faseGradeJogador+"z"+x).setStyle("display","none");}
+                        for(var x=1;x<=pQtdeImg;x++){Y.one("#dead"+faseGradeJogador+"z"+x).setStyle("display","none");}
                         Y.one("#grade"+faseGradeJogador+"z"+pzbImg).setStyle("display","block");
                     });
                 }
@@ -23,13 +24,18 @@
                 function mostraZumbiRandom(){
                     /*
                     esta função deve:
-                    1.saber qual grade o jogador esta agora, sabando-se que, se estiver começando o jogo agora, inicializa-se na grade0
+					
+					+Finalizado:
+                    1.saber qual grade o jogador esta agora, sabando-se que, se estiver começando o jogo agora, inicializa-se na grade0 
                     2.mostrar o zumbi em um determinado quadrado, e se caso o jogador ñ clicar, deve fazer sumir o mesmo, aparecendo em outro quadrado.
+                    5.quando o jogador matar o zumbi, deve ser computado pontos para ele.
+                    7.deve desenvolver funcao inteligente para gerenciar quando acabar uma fase e passar para a fase seguinte;
+					
+					+Pendente
                     3.se caso o jogador ja estiver clicado no zumbi exibido, o mesmo deve entrar no status morto, e não deve ser apagado.
                     4.desenvolver funcao para que quando o jogador matar zumbi, apareça imagem de zumbi sujo de sangue e o quadrado desabilitado para jogo.
-                    5.quando o jogador matar o zumbi, deve ser computado pontos para ele.
-                    6.deve ser desenvolvido função para calculo de tempo para passar cada fase de grade.
-                    7.deve desenvolver funcao inteligente para gerenciar quando acabar uma fase e passar para a fase seguinte;
+                    6.deve ser desenvolvido função para calculo de tempo para passar cada fase de grade.					
+					
                     */
 					
                     //YUI().use("node",function(YHtml){
@@ -48,9 +54,11 @@
                         ){
                         tempJogo=window.clearInterval(tempJogo);
                         console.log("finalizou o tempo da fase! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame);
+                        alert("finalizou o tempo da fase! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame);
                         faseGradeJogador = 0;
                         temporizadorGame = 0;
                         qtdePontosJogador= 0;
+						exibeCarrossel();
                     }
 						
                     if(faseGradeJogador===0){
@@ -101,23 +109,24 @@
                     qtdePontosJogador++;
                     YUI().use("node",function(Y){
                         //deve retirar a imagem do zumbi e colocar a imagem de alvo acertado;
-                        Y.one("#grade"+faseGradeJogador+"z"+idQuadro).setStyle("display","block");//trocar chamada de funcao
-                        
+                        Y.one("#grade"+faseGradeJogador+"z"+idQuadro).setStyle("display","none");//trocar chamada de funcao
+                        //Y.one("#dead"+faseGradeJogador+"z"+idQuadro).setStyle("display","block");// zombieDead1.jpg
+										console.debug("habilita imagem zombie morto");
                     });
                 }
-
+console.debug("acao apos habilitar zombie morto");
                 if((qtdePontosJogador === qtdeImg[faseGradeJogador]) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 1)) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 2)) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 3))){
                     tempJogo = window.clearInterval(tempJogo);
 					msg1     = "jogador finalizou o jogo! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame;
 					msg2     = "jogador finalizou a fase! debug=>  pontos=>"+pontosJogador+" fase=>"+faseGradeJogador+" tempo=>"+temporizadorGame;
-					
+console.debug("js=>0");					
 					if(
 						(faseGradeJogador===0 && pontosJogador>= 30) ||
 						(faseGradeJogador===1 && pontosJogador>= 100) ||
 						(faseGradeJogador===2 && pontosJogador>= 250) ||
 						(faseGradeJogador===3 && pontosJogador>= 480) ||
 						(faseGradeJogador===4 && pontosJogador>= 800)
-					   ){
+					   ){console.debug("js=>1");					
 						console.log(msg2);
 						alert(msg2);
 						faseGradeJogador++;
@@ -127,7 +136,7 @@
 					}else if(faseGradeJogador===5 && pontosJogador>= 2600){
                         console.log(msg1);
                         alert(msg1);
-						exibeCarrossel();
+						exibeCarrossel();console.debug("js=>2");					
 					}
-                }
+                }console.debug("js=>3");					
             }
