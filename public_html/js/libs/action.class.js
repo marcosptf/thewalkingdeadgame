@@ -38,9 +38,9 @@
                     exibeCarrossel();
                 });
 
-                btnTutorialJogo.on("click",function(e){
-                    console.log("clicou no botao tutorial jogo;");
-                });
+//                btnTutorialJogo.on("click",function(e){
+//                    console.log("clicou no botao tutorial jogo;");
+//                });
 
                 btnCreditos.on("click",function(e){
                     console.log("clicou no botao de creditos");
