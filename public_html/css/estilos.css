@@ -3,6 +3,8 @@
 * @since:19/09/2013
 * @desc:definições das propriedades usadas no game
 ********************************************************************************/
+
+/* estilo dos layouts */
 .layout{
 	border:1px solid #000;
 	width:600px;
@@ -21,6 +23,8 @@
 	cursor:url(smiley.gif),url(myBall.cur),auto;
 }
 
+
+/* estilos das subtelas */
 .subTela1{
 	position:relative;
 	top:0px;
@@ -36,39 +40,74 @@
 	width:415px;
 	height:400px;
 }
-.grade0 tr td{
-	width :600px;
-	height:188px;
-}
-.grade1 tr td{
-	width :500px;
-	height:93px;
-}
-.grade2 tr td{
-	width :500px;
-	height:93px;
-}
-.grade3 tr td{
-	width :500px;
-	height:93px;
-}
-.grade4 tr td{
-	width :500px;
-	height:93px;
-}
-.grade5 tr td{
-	text-align:center;
-	width :40px;
-	height:19px;
-}
-.grade6 tr td{
-	text-align:center;
-	width :40px;
-	height:19px;
-}
+
 .subTela3{
 	position:relative;
 	border:1px solid #000;
 	width:600px;
 	height:98px;
 }
+
+
+
+/* estilo da grade 0 */
+.grade0 tbody tr td span img {
+    height: 173px;
+    width: 203px;
+}
+
+.grade0 tbody tr td {
+    height: 173px;
+    width: 205px;
+}
+
+
+
+/* estilo da grade 1 */
+.grade1 tbody tr td span img {
+    height: 90px;
+    width: 200px;
+}
+
+.grade1 tbody tr td{
+    height: 90px;
+    width: 200px;
+}
+
+
+
+/* estilo da grade 2 */
+.grade2 tr td{
+	width :500px;
+	height:93px;
+}
+
+
+/* estilo da grade 3 */
+.grade3 tr td{
+	width :500px;
+	height:93px;
+}
+
+/* estilo da grade 4 */
+.grade4 tr td{
+	width :500px;
+	height:93px;
+}
+
+
+/* estilo da grade 5 */
+.grade5 tr td{
+	text-align:center;
+	width :40px;
+	height:19px;
+}
+
+
+/* estilo da grade 6 */
+.grade6 tr td{
+	text-align:center;
+	width :40px;
+	height:19px;
+}
+
