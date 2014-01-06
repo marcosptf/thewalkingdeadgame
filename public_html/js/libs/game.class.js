@@ -68,21 +68,25 @@ function mostraZumbiRandom() {
     if (faseGradeJogador === 0) {
         grade6.setStyle("display", "none");
         grade0.setStyle("display", "block");
+        
     } else if (faseGradeJogador === 1) {
         grade6.setStyle("display", "none");
         grade0.setStyle("display", "none");
         grade1.setStyle("display", "block");
+        
     } else if (faseGradeJogador === 2) {
         grade6.setStyle("display", "none");
         grade0.setStyle("display", "none");
         grade1.setStyle("display", "none");
         grade2.setStyle("display", "block");
+        
     } else if (faseGradeJogador === 3) {
         grade6.setStyle("display", "none");
         grade0.setStyle("display", "none");
         grade1.setStyle("display", "none");
         grade2.setStyle("display", "none");
         grade3.setStyle("display", "block");
+        
     } else if (faseGradeJogador === 4) {
         grade6.setStyle("display", "none");
         grade0.setStyle("display", "none");
@@ -90,6 +94,7 @@ function mostraZumbiRandom() {
         grade2.setStyle("display", "none");
         grade3.setStyle("display", "none");
         grade4.setStyle("display", "block");
+        
     } else if (faseGradeJogador === 5) {
         grade6.setStyle("display", "none");
         grade0.setStyle("display", "none");
@@ -98,11 +103,12 @@ function mostraZumbiRandom() {
         grade3.setStyle("display", "none");
         grade4.setStyle("display", "none");
         grade5.setStyle("display", "block");
+        
     }
 
     exibeIMGGame((Math.floor((Math.random() * qtdeImg[faseGradeJogador]) + 1)), qtdeImg[faseGradeJogador]);
     temporizadorGame++;
-//                   faseGradeJogador++;
+
 }
 
 
