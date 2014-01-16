@@ -57,57 +57,68 @@
 }
 
 .grade0 tbody tr td {
-    height: 173px;
+    height: 188px;
     width: 205px;
 }
-
-
 
 /* estilo da grade 1 */
 .grade1 tbody tr td span img {
     height: 90px;
     width: 200px;
 }
-
 .grade1 tbody tr td{
     height: 90px;
     width: 200px;
 }
 
-
-
 /* estilo da grade 2 */
-.grade2 tr td{
-	width :500px;
-	height:93px;
+.grade2 tbody tr td span img {
+    height: 90px;
+    width: 100px;
+}
+.grade2 tbody tr td{
+    height: 90px;
+    width: 100px;
 }
 
-
 /* estilo da grade 3 */
-.grade3 tr td{
-	width :500px;
-	height:93px;
+.grade3 tbody tr td span img {
+    height: 90px;
+    width: 66px;
+}
+.grade3 tbody tr td{
+    height: 90px;
+    width: 66px;
 }
 
 /* estilo da grade 4 */
-.grade4 tr td{
-	width :500px;
-	height:93px;
+.grade4 tbody tr td span img {
+    height: 90px;
+    width: 49px;
 }
-
+.grade4 tbody tr td{
+    height: 90px;
+    width: 49px;
+}
 
 /* estilo da grade 5 */
-.grade5 tr td{
-	text-align:center;
-	width :40px;
-	height:19px;
+.grade5 tbody tr td span img {
+    height: 15px;
+    width: 39.4px;
+}
+.grade5 tbody tr td{
+    height: 15px;
+    width: 39.4px;
 }
 
-
 /* estilo da grade 6 */
-.grade6 tr td{
-	text-align:center;
-	width :40px;
-	height:19px;
+.grade6 tbody tr td span img {
+    height: 15px;
+    width: 39.4px;
+}
+.grade6 tbody tr td{
+    height: 15px;
+    width: 39.4px;
+    
 }
 

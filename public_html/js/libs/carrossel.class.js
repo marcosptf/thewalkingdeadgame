@@ -22,7 +22,8 @@ function exibeIMGCarrossel(pzbImg) {
     YUI().use("node", function(Y) {
         if (carrosselOrdem === 1) {
 
-            Y.one("#grade6z" + pzbImg).setStyle("display", "block");
+            Y.one("#espaco6z" + pzbImg).setStyle("display", "none");
+            Y.one("#grade6z"  + pzbImg).setStyle("display", "block");
 
         } else if (carrosselOrdem === 2) {
 
@@ -31,14 +32,17 @@ function exibeIMGCarrossel(pzbImg) {
         } else if (carrosselOrdem === 3) {
 
             /* implementar carrocel circular */
-            Y.one("#grade6z" + carrosselCircular[pzbImg]).setStyle("display", "block");
+            Y.one("#espaco6z" + carrosselCircular[pzbImg]).setStyle("display", "none");
+            Y.one("#grade6z"  + carrosselCircular[pzbImg]).setStyle("display", "block");
 
         } else if (carrosselOrdem === 4) {
 
             for (var x = 1; x <= 180; x++) {
-                Y.one("#grade6z" + x).setStyle("display", "none");
+                Y.one("#espaco6z" + x).setStyle("display", "block");
+                Y.one("#grade6z"  + x).setStyle("display", "none");
             }
-            Y.one("#grade6z" + pzbImg).setStyle("display", "block");
+            Y.one("#espaco6z" + pzbImg).setStyle("display", "none");
+            Y.one("#grade6z"  + pzbImg).setStyle("display", "block");
 
         } else if (carrosselOrdem === 5) {
 
@@ -50,7 +54,8 @@ function exibeIMGCarrossel(pzbImg) {
             zbImg = 0;
             carrosselOrdem++;
             for (var x = 1; x <= 180; x++) {
-                Y.one("#grade6z" + x).setStyle("display", "none");
+                Y.one("#espaco6z" + x).setStyle("display", "block");
+                Y.one("#grade6z"  + x).setStyle("display", "none");
             }
         }
     });
