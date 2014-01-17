@@ -50,3 +50,9 @@ for(var x=1;x<180;x++){
     //document.getElementById('dead5z'+x).style.display    = 'block';
 }
 
+
+
+================================================================================
++ TWD RPG
+No meio do desenvolvimento deste jogo, tivemos a ideia de ir um pouco mais a fundo 
+do que um simples jogo de puzzle.
