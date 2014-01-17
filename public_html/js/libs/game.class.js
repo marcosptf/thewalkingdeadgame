@@ -104,6 +104,16 @@ function mostraZumbiRandom() {
         grade4.setStyle("display", "none");
         grade5.setStyle("display", "block");
         
+    } else if (faseGradeJogador === 6) {
+        grade0.setStyle("display", "none");
+        grade1.setStyle("display", "none");
+        grade2.setStyle("display", "none");
+        grade3.setStyle("display", "none");
+        grade4.setStyle("display", "none");
+        grade5.setStyle("display", "none");
+        grade6.setStyle("display", "block");
+        for(var x=1;x<180;x++){document.getElementById('espaco6z'+x).style.display = 'none';}
+        
     }
 
     exibeIMGGame((Math.floor((Math.random() * qtdeImg[faseGradeJogador]) + 1)), qtdeImg[faseGradeJogador]);
