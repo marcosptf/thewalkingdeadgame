@@ -6,46 +6,50 @@
 
 /* estilo dos layouts */
 .layout{
-	border:1px solid #000;
-	width:600px;
-	height:500px;
-	position:relative;
-	top:25px;
+    border:1px solid #000;
+    width:600px;
+    height:500px;
+    position:relative;
+    top:25px;
+    background-image:url('file:///C:/Users/joicebem/thewalkingdeadgame-develop/public_html/img/bg/bg3.jpg');
+    background-repeat:no-repeat;
+    /* background-attachment:fixed; */
 }
+
 .layout1{
-	
+
 }
 .layout2{
-	
+
 }
 
 .pointerCSS{
-	cursor:url(smiley.gif),url(myBall.cur),auto;
+    cursor:url(smiley.gif),url(myBall.cur),auto;
 }
 
 
 /* estilos das subtelas */
 .subTela1{
-	position:relative;
-	top:0px;
-	border:1px solid #000;
-	width:180px;
-	height:400px;
+    position:relative;
+    top:0px;
+    border:1px solid #000;
+    width:180px;
+    height:400px;
 }
 .subTela2{
-	position:relative;
-	top:-402px;
-	float:right;
-	border:1px solid #000;
-	width:415px;
-	height:400px;
+    position:relative;
+    top:-402px;
+    float:right;
+    border:1px solid #000;
+    width:415px;
+    height:400px;
 }
 
 .subTela3{
-	position:relative;
-	border:1px solid #000;
-	width:600px;
-	height:98px;
+    position:relative;
+    border:1px solid #000;
+    width:600px;
+    height:98px;
 }
 
 
@@ -119,6 +123,6 @@
 .grade6 tbody tr td{
     height: 15px;
     width: 39.4px;
-    
+
 }
 
