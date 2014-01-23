@@ -8,9 +8,18 @@ The Walking Dead :: Puzzle
 7)fazer o jogo funcionar corretamente
 9)realizar testes
 10)quando estiver em uma versão beta, postar no facebook
+11)inserir a musica de fundo;
 
 
 + Tarefas em andamento:
+->Trocar os botões <html> por botões css ou imagens de acordo com a imagem de 
+fundo e posiciona-las corretamente;
+->corrigir o bug que permite aparecer o msm zumbi no mesmo quadro duas vezes;
+->corrigir problema de redimensionamento de tamanho;
+->colocar as imagens de armas no ponteiro do mouse;
+->quando clicar no botão, deve fazer ter um load de ao menos 2 segundos ou um segundo, 
+para dar impressão que o jogo esta sendo carregado, fica mais elegante visualmente, 
+podemos ultilizar a imagem de fundo bg2
 5)inserir painel com pontuação
 
 

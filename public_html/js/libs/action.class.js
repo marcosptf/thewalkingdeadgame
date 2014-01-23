@@ -22,12 +22,18 @@ YUI().use("node", function(Y) {
     grade4 = Y.one("#grade4");
     grade5 = Y.one("#grade5");
     grade6 = Y.one("#grade6");
+    divPrincipal = Y.one("#divPrincipal");
+    /*    background-image:url('file:///home/deployer/thewalkingdeadgame/public_html/img/bg/bg3.jpg');*/
+    btnMatarZumbis.setStyle("background-image", "url('file:///home/deployer/thewalkingdeadgame/public_html/img/bg/bg3.jpg')");
+    
 
     btnInicioJogo2.on("click", function(e) {
+        divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage4+"')");
         location.reload();
     });
 
     btnInicioJogo.on("click", function(e) {
+        divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage4+"')");
         exibeCarrossel();
     });
 
@@ -35,6 +41,7 @@ YUI().use("node", function(Y) {
         btnMatarZumbis.setStyle("display", "block");
         btnArregarNoJogo.setStyle("display", "none");
         btnInicioJogo2.setStyle("display", "block");
+        divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage4+"')");
         for (var x = 0; x <= 6; x++) {
             Y.one("#grade" + x).setStyle("display", "none");
         }
@@ -49,6 +56,7 @@ YUI().use("node", function(Y) {
         btnArregarNoJogo.setStyle("display", "block");
         btnMatarZumbis.setStyle("display", "none");
         btnInicioJogo2.setStyle("display", "none");
+        divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage1+"')");
         iniciaJogo();
     });
 

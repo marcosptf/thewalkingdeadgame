@@ -11,7 +11,7 @@
     height:500px;
     position:relative;
     top:25px;
-    background-image:url('file:///C:/Users/joicebem/thewalkingdeadgame-develop/public_html/img/bg/bg3.jpg');
+/*    background-image:url('file:///home/deployer/thewalkingdeadgame/public_html/img/bg/bg3.jpg');*/
     background-repeat:no-repeat;
     /* background-attachment:fixed; */
 }

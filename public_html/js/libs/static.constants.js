@@ -27,7 +27,13 @@ var     btnInicioJogo,
         temporizadorGame  = 0,
         faseGradeJogador  = 0,
         zbImg             = 1,
-        carrosselOrdem    = 1;
+        carrosselOrdem    = 1
+        BGImagePath       = "file:///home/deployer/thewalkingdeadgame/public_html/img/bg/bg",
+        BGImage1          = "1.jpg",
+        BGImage2          = "2.jpg",
+        BGImage3          = "3.jpg",
+        BGImage4          = "4.jpg",
+        BGImage5          = "5.jpg";
 
 var qtdeImg    = new Array();
     qtdeImg[0] = 4;
