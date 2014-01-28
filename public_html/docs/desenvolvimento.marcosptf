@@ -12,7 +12,7 @@ The Walking Dead :: Puzzle
 
 
 + Correções de Bugs:
-1)corrigir o bug que permite aparecer o msm zumbi no mesmo quadro duas vezes;       <gravíssimo>
+1)corrigir o bug que permite aparecer o msm zumbi no mesmo quadro duas vezes;       <corrigido>
 2)corrigir bug que quando o jogador perde, ele mostra a msg mas não leva o jogador
 a lugar nenhum, ele deve mostrar a mensagem fora do alert js, dizendo que ele
 perdeu, e redireciona-lo ao carrossel.

@@ -24,7 +24,7 @@ YUI().use("node", function(Y) {
     grade6 = Y.one("#grade6");
     divPrincipal = Y.one("#divPrincipal");
     /*    background-image:url('file:///home/deployer/thewalkingdeadgame/public_html/img/bg/bg3.jpg');*/
-    btnMatarZumbis.setStyle("background-image", "url('file:///home/deployer/thewalkingdeadgame/public_html/img/bg/bg3.jpg')");
+    btnMatarZumbis.setStyle("background-image", "url('"+BGImagePath+BGImage3+"')");
     
 
     btnInicioJogo2.on("click", function(e) {

@@ -33,7 +33,8 @@ var     btnInicioJogo,
         BGImage2          = "2.jpg",
         BGImage3          = "3.jpg",
         BGImage4          = "4.jpg",
-        BGImage5          = "5.jpg";
+        BGImage5          = "5.jpg"
+        imagemUsadaGame   = new Array();
 
 var qtdeImg    = new Array();
     qtdeImg[0] = 4;

@@ -4,13 +4,49 @@
  * @desc:atribuição dos elementos html nas propriedades do jogo com YUI();
  ********************************************************************************/
 
-function exibeIMGGame(pzbImg, pQtdeImg) {
+function processaImagemUsada(imagemSupostamenteUsada){
+    for(var x in imagemUsadaGame){
+        if(imagemUsadaGame[x]===imagemSupostamenteUsada){
+            return true;
+        }
+    }
+    return false;
+}
+
+function geraImagemRandomica(){
+    return (Math.floor((Math.random() * qtdeImg[faseGradeJogador]) + 1));
+}
+
+function calculaImagemUsadaNoGamePorFase(){
+    var imagemRandomica;
+    
+    imagemRandomica = geraImagemRandomica();
+    console.log("imagem randomica gerada=>"+imagemRandomica);
+    
+    for(var x = 0; x<=qtdeImg[faseGradeJogador];x++){
+        
+        if(!processaImagemUsada(imagemRandomica)){
+            console.log("imagem randomica gerada ñ existia =>"+imagemRandomica);
+            imgZumbiAtual = imagemRandomica;
+            return imagemRandomica;
+        }else{
+            console.log("imagem randomica gerada ja existia, regerando imagem randomica =>"+imagemRandomica);
+            imagemRandomica = geraImagemRandomica();
+        }
+    }
+}
+
+
+function exibeIMGGame() {
     YUI().use("node", function(Y) {
-        imgZumbiAtual = pzbImg;
-        for (var x = 1; x <= pQtdeImg; x++) {
+        
+        pzbImg = calculaImagemUsadaNoGamePorFase();
+        
+        for (var x = 1; x <= qtdeImg[faseGradeJogador]; x++) {
             Y.one("#grade" + faseGradeJogador + "z" + x).setStyle("display", "none");
         }
 //                        for(var x=1;x<=pQtdeImg;x++){Y.one("#dead"+faseGradeJogador+"z"+x).setStyle("display","none");}
+        console.log("habilitando zumbi na ==> #grade" + faseGradeJogador + "z" + pzbImg);
         Y.one("#grade" + faseGradeJogador + "z" + pzbImg).setStyle("display", "block");
     });
 }
@@ -116,7 +152,7 @@ function mostraZumbiRandom() {
         
     }
 
-    exibeIMGGame((Math.floor((Math.random() * qtdeImg[faseGradeJogador]) + 1)), qtdeImg[faseGradeJogador]);
+    exibeIMGGame();
     temporizadorGame++;
 
 }
@@ -127,6 +163,7 @@ function capturaAcaoJogador(idQuadro) {
     if (imgZumbiAtual === idQuadro) {
         pontosJogador += 10;
         qtdePontosJogador++;
+        imagemUsadaGame.push(idQuadro);
         YUI().use("node", function(Y) {
             //deve retirar a imagem do zumbi e colocar a imagem de alvo acertado;
             Y.one("#grade" + faseGradeJogador + "z" + idQuadro).setStyle("display", "none");//trocar chamada de funcao
@@ -176,4 +213,5 @@ function capturaAcaoJogador(idQuadro) {
 
 function fimDeFase() {
     tempJogo = window.clearInterval(tempJogo);
+    imagemUsadaGame   = new Array();
 }
