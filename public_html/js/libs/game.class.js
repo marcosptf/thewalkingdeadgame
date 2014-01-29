@@ -69,12 +69,12 @@ function mostraZumbiRandom() {
      5.quando o jogador matar o zumbi, deve ser computado pontos para ele.
      7.deve desenvolver funcao inteligente para gerenciar quando acabar uma fase e passar para a fase seguinte;
      3.se caso o jogador ja estiver clicado no zumbi exibido, o mesmo deve entrar no status morto, e não deve ser apagado.
-     
-     +Andamento
      4.desenvolver funcao para que quando o jogador matar zumbi, apareça imagem de zumbi sujo de sangue e o quadrado desabilitado para jogo.
      
-     +Pendente
+     +Andamento
      6.deve ser desenvolvido função para calculo de tempo para passar cada fase de grade.					
+     
+     +Pendente
      
      */
 
