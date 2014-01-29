@@ -17,7 +17,7 @@ The Walking Dead :: Puzzle
 a lugar nenhum, ele deve mostrar a mensagem fora do alert js, dizendo que ele
 perdeu, e redireciona-lo ao carrossel.
 3)corrigir problema de redimensionamento de tamanho dos quadros;
-
+4)o jogo num passa da grade 4.
 
 + Tarefas em andamento:
 ->Trocar os botões <html> por botões css ou imagens de acordo com a imagem de 
