@@ -5,6 +5,24 @@
  * Rotinas do carrossel
  ********************************************************************************/
 
+function voltaParaCarrossel() {
+    faseGradeJogador = 0;
+    temporizadorGame = 0;
+    qtdePontosJogador = 0;
+    btnMatarZumbis.setStyle("display", "block");
+    btnArregarNoJogo.setStyle("display", "none");
+    btnInicioJogo2.setStyle("display", "block");
+    divPrincipal.setStyle("backgroundImage", "url('" + BGImagePath + BGImage4 + "')");
+    grade0.setStyle("display", "none");
+    grade1.setStyle("display", "none");
+    grade2.setStyle("display", "none");
+    grade3.setStyle("display", "none");
+    grade4.setStyle("display", "none");
+    grade5.setStyle("display", "none");
+    grade6.setStyle("display", "none");
+    exibeCarrossel();
+    return;
+}
 
 function exibeCarrossel() {
     tempJogo = window.clearInterval(tempJogo);
@@ -23,7 +41,7 @@ function exibeIMGCarrossel(pzbImg) {
         if (carrosselOrdem === 1) {
 
             Y.one("#espaco6z" + pzbImg).setStyle("display", "none");
-            Y.one("#grade6z"  + pzbImg).setStyle("display", "block");
+            Y.one("#grade6z" + pzbImg).setStyle("display", "block");
 
         } else if (carrosselOrdem === 2) {
 
@@ -33,16 +51,16 @@ function exibeIMGCarrossel(pzbImg) {
 
             /* implementar carrocel circular */
             Y.one("#espaco6z" + carrosselCircular[pzbImg]).setStyle("display", "none");
-            Y.one("#grade6z"  + carrosselCircular[pzbImg]).setStyle("display", "block");
+            Y.one("#grade6z" + carrosselCircular[pzbImg]).setStyle("display", "block");
 
         } else if (carrosselOrdem === 4) {
 
             for (var x = 1; x <= 180; x++) {
                 Y.one("#espaco6z" + x).setStyle("display", "block");
-                Y.one("#grade6z"  + x).setStyle("display", "none");
+                Y.one("#grade6z" + x).setStyle("display", "none");
             }
             Y.one("#espaco6z" + pzbImg).setStyle("display", "none");
-            Y.one("#grade6z"  + pzbImg).setStyle("display", "block");
+            Y.one("#grade6z" + pzbImg).setStyle("display", "block");
 
         } else if (carrosselOrdem === 5) {
 
@@ -55,7 +73,7 @@ function exibeIMGCarrossel(pzbImg) {
             carrosselOrdem++;
             for (var x = 1; x <= 180; x++) {
                 Y.one("#espaco6z" + x).setStyle("display", "block");
-                Y.one("#grade6z"  + x).setStyle("display", "none");
+                Y.one("#grade6z" + x).setStyle("display", "none");
             }
         }
     });

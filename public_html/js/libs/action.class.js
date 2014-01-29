@@ -38,14 +38,7 @@ YUI().use("node", function(Y) {
     });
 
     btnArregarNoJogo.on("click", function(e) {
-        btnMatarZumbis.setStyle("display", "block");
-        btnArregarNoJogo.setStyle("display", "none");
-        btnInicioJogo2.setStyle("display", "block");
-        divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage4+"')");
-        for (var x = 0; x <= 6; x++) {
-            Y.one("#grade" + x).setStyle("display", "none");
-        }
-        exibeCarrossel();
+        voltaParaCarrossel();
     });
 
     btnCreditos.on("click", function(e) {

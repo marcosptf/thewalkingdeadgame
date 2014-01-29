@@ -20,18 +20,12 @@ function geraImagemRandomica(){
 function calculaImagemUsadaNoGamePorFase(){
     var imagemRandomica;
     
-    imagemRandomica = geraImagemRandomica();
-    console.log("imagem randomica gerada=>"+imagemRandomica);
-    
     for(var x = 0; x<=qtdeImg[faseGradeJogador];x++){
-        
+        imagemRandomica = geraImagemRandomica();
         if(!processaImagemUsada(imagemRandomica)){
             console.log("imagem randomica gerada ñ existia =>"+imagemRandomica);
             imgZumbiAtual = imagemRandomica;
             return imagemRandomica;
-        }else{
-            console.log("imagem randomica gerada ja existia, regerando imagem randomica =>"+imagemRandomica);
-            imagemRandomica = geraImagemRandomica();
         }
     }
 }
@@ -95,10 +89,7 @@ function mostraZumbiRandom() {
         tempJogo = window.clearInterval(tempJogo);
         console.log("finalizou o tempo da fase! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame);
         alert("finalizou o tempo da fase! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame);
-        faseGradeJogador = 0;
-        temporizadorGame = 0;
-        qtdePontosJogador = 0;
-        exibeCarrossel();
+        voltaParaCarrossel();
     }
 
     if (faseGradeJogador === 0) {
