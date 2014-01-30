@@ -23,9 +23,8 @@ YUI().use("node", function(Y) {
     grade5 = Y.one("#grade5");
     grade6 = Y.one("#grade6");
     divPrincipal = Y.one("#divPrincipal");
-    /*    background-image:url('file:///home/deployer/thewalkingdeadgame/public_html/img/bg/bg3.jpg');*/
+    subTela2 = Y.one("#subTela2");
     btnMatarZumbis.setStyle("background-image", "url('"+BGImagePath+BGImage3+"')");
-    
 
     btnInicioJogo2.on("click", function(e) {
         divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage4+"')");
@@ -50,6 +49,7 @@ YUI().use("node", function(Y) {
         btnMatarZumbis.setStyle("display", "none");
         btnInicioJogo2.setStyle("display", "none");
         divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage1+"')");
+        subTela2.setStyle("cursor", "url('"+BGImagePath+armaFaca1+"'),crosshair");
         iniciaJogo();
     });
 

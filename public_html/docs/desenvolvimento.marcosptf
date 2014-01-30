@@ -22,12 +22,12 @@ perdeu, e redireciona-lo ao carrossel.
 
 + Tarefas em andamento:
 ->Trocar os botões <html> por botões css ou imagens de acordo com a imagem de 
-fundo e posiciona-las corretamente;
-->colocar as imagens de armas no ponteiro do mouse;
-->quando clicar no botão, deve fazer ter um load de ao menos 2 segundos ou um segundo, 
-para dar impressão que o jogo esta sendo carregado, fica mais elegante visualmente, 
-podemos ultilizar a imagem de fundo bg2
-5)inserir painel com pontuação
+fundo e posiciona-las corretamente;                                             ==>pesquisar melhor solução visual
+->colocar as imagens de armas no ponteiro do mouse;                             ==>ñ conseguimos colocar img, ficou como crosshair por enquanto
+->quando clicar no botão, deve fazer ter um load de ao menos 2 segundos ou um 
+segundo, para dar impressão que o jogo esta sendo carregado, fica mais elegante 
+visualmente, podemos ultilizar a imagem de fundo bg2                            ==>em dev
+5)inserir painel com pontuação                                                  ==>aguardando
 
 
 + Tarefas realizadas:

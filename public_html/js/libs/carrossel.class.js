@@ -13,6 +13,7 @@ function voltaParaCarrossel() {
     btnArregarNoJogo.setStyle("display", "none");
     btnInicioJogo2.setStyle("display", "block");
     divPrincipal.setStyle("backgroundImage", "url('" + BGImagePath + BGImage4 + "')");
+    subTela2.setStyle("cursor", "default");
     grade0.setStyle("display", "none");
     grade1.setStyle("display", "none");
     grade2.setStyle("display", "none");
