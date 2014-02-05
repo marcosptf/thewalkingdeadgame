@@ -14,10 +14,10 @@ grau de dificuldade.
 
 + Correções de Bugs:
 1)corrigir o bug que permite aparecer o msm zumbi no mesmo quadro duas vezes;       <corrigido>
+3)corrigir problema de redimensionamento de tamanho dos quadros;                    <corrigido>
 2)corrigir bug que quando o jogador perde, ele mostra a msg mas não leva o jogador
 a lugar nenhum, ele deve mostrar a mensagem fora do alert js, dizendo que ele
 perdeu, e redireciona-lo ao carrossel.
-3)corrigir problema de redimensionamento de tamanho dos quadros;
 4)o jogo num passa da grade 4.
 
 
