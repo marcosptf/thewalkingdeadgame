@@ -14,15 +14,24 @@ function voltaParaCarrossel() {
     btnInicioJogo2.setStyle("display", "block");
     divPrincipal.setStyle("backgroundImage", "url('" + BGImagePath + BGImage4 + "')");
     subTela2.setStyle("cursor", "default");
+    console.debug("debugExibeCarrossel(0);");
     grade0.setStyle("display", "none");
+    console.debug("debugExibeCarrossel(1);");
     grade1.setStyle("display", "none");
+    console.debug("debugExibeCarrossel(2);");
     grade2.setStyle("display", "none");
+    console.debug("debugExibeCarrossel(3);");
     grade3.setStyle("display", "none");
+    console.debug("debugExibeCarrossel(4);");
     grade4.setStyle("display", "none");
+    console.debug("debugExibeCarrossel(5);");
     grade5.setStyle("display", "none");
+    console.debug("debugExibeCarrossel(6);");
     grade6.setStyle("display", "none");
+    console.debug("debugExibeCarrossel(7);");
     exibeCarrossel();
-    return;
+    console.debug("debugExibeCarrossel(8);");
+//    return;
 }
 
 function exibeCarrossel() {

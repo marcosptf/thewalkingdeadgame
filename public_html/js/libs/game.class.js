@@ -50,7 +50,7 @@ function iniciaJogo() {
     tempJogo = self.setInterval(function() {
         mostraZumbiRandom()
 //                        },1000);
-    }, 2000);
+    }, temporizadorMilisegundos);
 }
 
 function mostraZumbiRandom() {
@@ -83,13 +83,13 @@ function mostraZumbiRandom() {
             (faseGradeJogador === 1) && (temporizadorGame === 10) ||
             (faseGradeJogador === 2) && (temporizadorGame === 20) ||
             (faseGradeJogador === 3) && (temporizadorGame === 30) ||
-            (faseGradeJogador === 4) && (temporizadorGame === 30) ||
-            (faseGradeJogador === 5) && (temporizadorGame === 30)
+            (faseGradeJogador === 4) && (temporizadorGame === 40) ||
+            (faseGradeJogador === 5) && (temporizadorGame === 50)
             ) {
-        tempJogo = window.clearInterval(tempJogo);
-        console.log("finalizou o tempo da fase! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame);
-        alert("finalizou o tempo da fase! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame);
-        voltaParaCarrossel();
+        fimDeFase();
+        console.log("você não conseguiu matar os zumbis a tempo! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame);
+        alert("você não conseguiu matar os zumbis a tempo! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame+" temposizadorMilisegundos=>"+temporizadorMilisegundos);
+        return voltaParaCarrossel();
     }
 
     if (faseGradeJogador === 0) {
@@ -168,21 +168,22 @@ function capturaAcaoJogador(idQuadro) {
         console.debug("js=> qtdePontosJogador=>" + qtdePontosJogador + " qtdeImagemNaFase=>" + qtdeImg[faseGradeJogador]);
 
         msg1 = "jogador finalizou o jogo! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame;
-        msg2 = "jogador finalizou a fase! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame;
+        msg2 = "jogador finalizou a fase! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame+" temposizadorMilisegundos=>"+temporizadorMilisegundos;
         if (
                 (faseGradeJogador === 0 && pontosJogador >= 30) ||
                 (faseGradeJogador === 1 && pontosJogador >= 100) ||
                 (faseGradeJogador === 2 && pontosJogador >= 250) ||
                 (faseGradeJogador === 3 && pontosJogador >= 480) ||
-                (faseGradeJogador === 4 && pontosJogador >= 800)
+                (faseGradeJogador === 4 && pontosJogador >= 760)
                 ) {
             console.debug("js=>1");
 
             /* para o processamento do temporizador do jogo */
             fimDeFase();
-
             console.log(msg2);
             alert(msg2);
+//            temporizadorMilisegundos -=500;
+            temporizadorMilisegundos = ((temporizadorMilisegundos > 1000) ? (temporizadorMilisegundos-400) : (temporizadorMilisegundos-200));
             faseGradeJogador++;
             temporizadorGame = 0;
             qtdePontosJogador = 0;
