@@ -20,9 +20,6 @@ jogador a lugar nenhum, ele deve mostrar a mensagem fora do alert js, dizendo
  que ele perdeu, e redireciona-lo ao carrossel.                                 ==> <corrigido>
 4)o jogo num passa da grade 4.                                                  ==> em dev
 
-git commit -m "corrigido o bug maldito que quando o jogador perde, ele mostra a msg mas não leva o 
-jogador a lugar nenhum, ele deve mostrar a mensagem fora do alert js, dizendo
- que ele perdeu, e redireciona-lo ao carrossel."
 
 + Tarefas em andamento:
 ->Trocar os botões <html> por botões css ou imagens de acordo com a imagem de 
