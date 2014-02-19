@@ -1,26 +1,26 @@
 The Walking Dead :: Puzzle
 
-+ Pendencias do projeto:
++ Itens bons para o projeto se der tempo ou for viável:
 10)quando estiver em uma versão beta, postar no facebook
 11)inserir a musica de fundo;
-7)fazer o jogo funcionar corretamente
+->quando clicar no botão, deve fazer ter um load de ao menos 2 segundos ou um 
+segundo, para dar impressão que o jogo esta sendo carregado, fica mais elegante 
+visualmente, podemos ultilizar a imagem de fundo bg2                            ==>em aguardo
 
 + Correções de Bugs:
 
 
 + Tarefas em andamento:
-9)realizar testes
+5)inserir painel com pontuação                                                  ==> <em dev>
 ->Trocar os botões <html> por botões css ou imagens de acordo com a imagem de 
 fundo e posiciona-las corretamente;                                             ==>pesquisar melhor solução visual
-5)inserir painel com pontuação                                                  ==> <em dev>
-->quando clicar no botão, deve fazer ter um load de ao menos 2 segundos ou um 
-segundo, para dar impressão que o jogo esta sendo carregado, fica mais elegante 
-visualmente, podemos ultilizar a imagem de fundo bg2                            ==>em aguardo
+9)realizar testes
 
 
 + Tarefas realizadas:
 ->colocar as imagens de armas no ponteiro do mouse;                             ==>ñ conseguimos colocar img, ficou como crosshair por enquanto (vale a pena consultar o matheus)
 3)inserir/desenvolver os itens que serão ponteiro do mouse na sub-tela 1
+7)fazer o jogo funcionar corretamente
 1)desenvolver uma arte para a tela inicial.
 8)inserir bom layout com imagens do filme TWD.
 12)conforme ir avançando no jogo, deve ser mais rápido para que tenha um certo 
