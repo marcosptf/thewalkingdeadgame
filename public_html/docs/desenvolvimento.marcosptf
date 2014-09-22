@@ -20,13 +20,13 @@ visualmente, podemos ultilizar a imagem de fundo bg2                            
 ->pesquisar para deixar os graficos semelhantes a um jogo profissional.         <css>
 ->correção do layout para entrega do jogo como um produto final.                <css>
 ->pesquisar fontes de zombie para colocar nos botões e na pontuação do jogo.    <css>
+->colocar as imagens de armas no ponteiro do mouse;                             ==>ñ conseguimos colocar img, ficou como crosshair por enquanto (vale a pena consultar o matheus)
 ->Trocar os botões <html> por botões css ou imagens de acordo com a imagem de 
 fundo e posiciona-las corretamente;                                             ==>pesquisar melhor solução visual
 9)realizar testes
 
 
 + Tarefas realizadas:
-->colocar as imagens de armas no ponteiro do mouse;                             ==>ñ conseguimos colocar img, ficou como crosshair por enquanto (vale a pena consultar o matheus)
 3)inserir/desenvolver os itens que serão ponteiro do mouse na sub-tela 1
 7)fazer o jogo funcionar corretamente
 1)desenvolver uma arte para a tela inicial.
