@@ -27,6 +27,11 @@
     cursor:url(smiley.gif),url(myBall.cur),auto;
 }
 
+#btnInicio{
+    left: 225px;
+    position: relative;
+    top: 305px;
+}
 
 /* estilos das subtelas */
 .subTela1{

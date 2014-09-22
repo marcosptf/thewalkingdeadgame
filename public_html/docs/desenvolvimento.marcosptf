@@ -11,11 +11,11 @@ visualmente, podemos ultilizar a imagem de fundo bg2                            
 
 
 + Pendencias do projeto:
-->após o jogo passar por testes e estar bonito, deployar no FB.
-->pesquisar para deixar os graficos semelhantes a um jogo profissional.
-->correção do layout para entrega do jogo como um produto final.
-->pesquisar fontes de zombie para colocar nos botões e na pontuação do jogo.
-->adicionar ao menos 20 fases no jogo, reutilizando as grids já criadas.
+->após o jogo passar por testes e estar bonito, deployar no FB.                 <testes + deploy>
+->adicionar ao menos 20 fases no jogo, reutilizando as grids já criadas.        <programacao>
+->pesquisar para deixar os graficos semelhantes a um jogo profissional.         <css>
+->correção do layout para entrega do jogo como um produto final.                <css>
+->pesquisar fontes de zombie para colocar nos botões e na pontuação do jogo.    <css>
 
 
 + Tarefas em andamento:

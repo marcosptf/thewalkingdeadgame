@@ -13,7 +13,7 @@ YUI().use("node", function(Y) {
     btnInicioJogo2 = Y.one("#btnInicioJogo");
     btnMatarZumbis = Y.one("#btnMatarZumbis");
     btnTutorialJogo = Y.one("#btnTutorialJogo");
-    btnCreditos = Y.one("#btnCreditos");
+//    btnCreditos = Y.one("#btnCreditos");
     btnArregarNoJogo = Y.one("#btnArregarNoJogo");
     grade0 = Y.one("#grade0");
     grade1 = Y.one("#grade1");
@@ -40,9 +40,9 @@ YUI().use("node", function(Y) {
         voltaParaCarrossel();
     });
 
-    btnCreditos.on("click", function(e) {
-        console.log("clicou no botao de creditos");
-    });
+//    btnCreditos.on("click", function(e) {
+//        console.log("clicou no botao de creditos");
+//    });
 
     btnMatarZumbis.on("click", function(e) {
         btnArregarNoJogo.setStyle("display", "block");
