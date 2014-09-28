@@ -37,7 +37,9 @@ YUI().use("node", function(Y) {
     });
 
     btnArregarNoJogo.on("click", function(e) {
-        voltaParaCarrossel();
+        /* voltaParaCarrossel(); */
+        divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage4+"')");
+        location.reload();		
     });
 
 //    btnCreditos.on("click", function(e) {
