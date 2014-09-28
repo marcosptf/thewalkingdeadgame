@@ -41,18 +41,19 @@
     width:180px;
     height:400px;
 }
-.subTela2{
-    position:relative;
-    top:-402px;
-    float:right;
-    border:1px solid #000;
-    width:415px;
-    height:400px;
+.subTela2 {
+    border: 1px solid none;
+    height: 400px;
+    left: 80px;
+    position: relative;
+    top: 5px;
+    width: 415px;
+	color:#fff;
 }
 
 .subTela3{
     position:relative;
-    border:1px solid #000;
+    border:1px solid none;
     width:600px;
     height:98px;
 }
