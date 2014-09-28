@@ -12,7 +12,7 @@ and open the template in the editor.
         <script src='js/libs/yui-3.3.0/yui-min.js'></script>
         <script src='js/libs/yui-3.3.0/node-base-min.js'></script>
         <script src='js/libs/yui-3.3.0/node-core-min.js'></script>
-        <script src='js/libs/yui-3.3.0/encripterjs.min.js'></script>
+        <!-- <script src='js/libs/yui-3.3.0/encripterjs.min.js'></script> -->
         
         <!-- versão para desenvolvimento -->
         <script src='js/libs/static.constants.js'></script>
@@ -44,7 +44,7 @@ and open the template in the editor.
 
             <!-- tela inicial do jogo puzzle  -->
             <div id="tela1" class="layout2" style="display:none;">
-
+			<!--
                 <div class="subTela1">
                     sub tela 1 - subtela auxiliar lateral esquerda 
                     <br/><br/>
@@ -52,11 +52,12 @@ and open the template in the editor.
                     <br/>
                     <b>img cacetete</b>
                 </div>
-
+			-->
                 <div class="subTela2" id="subTela2">
-                    sub tela 2 - subtela do jogo -<span id="idFase"></span>                
+                    <!-- sub tela 2 - subtela do jogo - -->
+					<span id="idFase"></span>                
 
-                    <table border="1" cellspacing="0" cellpadding="0" id="grade0" style="display:none;" class="grade0">
+                    <table border="0" cellspacing="0" cellpadding="0" id="grade0" style="display:none;" class="grade0">
                         <tr>
                             <td>
                                 <span id="grade0z1" style="display:none;"><img alt="" src="img/zb1.png" onclick="capturaAcaoJogador(1);" /> </span>
@@ -79,7 +80,7 @@ and open the template in the editor.
                         </tr>
                     </table>
 
-                    <table border="1" cellspacing="0" cellpadding="0" id="grade1" style="display:none;" class="grade1">
+                    <table border="0" cellspacing="0" cellpadding="0" id="grade1" style="display:none;" class="grade1">
                         <tr>
                             <td>
                                 <span id="grade1z1" style="display:none;"><img alt="" src='img/zb5.png' onclick="capturaAcaoJogador(1);" /></span>
@@ -122,7 +123,7 @@ and open the template in the editor.
                         </tr>
                     </table>
 
-                    <table border="1" cellspacing="0" cellpadding="0" id="grade2" style="display:none;" class="grade2">
+                    <table border="0" cellspacing="0" cellpadding="0" id="grade2" style="display:none;" class="grade2">
                         <tr>
                             <td>
                                 <span id="grade2z1" style="display:none;"><img alt="" src='img/zb13.png' onclick="capturaAcaoJogador(1);" /></span>
@@ -197,7 +198,7 @@ and open the template in the editor.
                         </tr>
                     </table>
 
-                    <table border="1" cellspacing="0" cellpadding="0" id="grade3" style="display:none;" class="grade3">
+                    <table border="0" cellspacing="0" cellpadding="0" id="grade3" style="display:none;" class="grade3">
                         <tr>
                             <td>
                                 <span id="grade3z1" style="display:none;"><img alt="" src='img/zb1.png' onclick="capturaAcaoJogador(1);" /></span>
@@ -304,7 +305,7 @@ and open the template in the editor.
                         </tr>
                     </table>
 
-                    <table border="1" cellspacing="0" cellpadding="0" id="grade4" style="display:none;" class="grade4">
+                    <table border="0" cellspacing="0" cellpadding="0" id="grade4" style="display:none;" class="grade4">
                         <tr>
                             <td>
                                 <span id="grade4z1" style="display:none;"><img alt="" src='img/zb11.png' onclick="capturaAcaoJogador(1);" /></span>
@@ -445,7 +446,7 @@ and open the template in the editor.
 
 
 
-                    <table border="1" cellspacing="0" cellpadding="0" id="grade5" style="display:none;" class="grade5">
+                    <table border="0" cellspacing="0" cellpadding="0" id="grade5" style="display:none;" class="grade5">
                         <tr>
                             <td>
                                 <span id="grade5z1" style="display:none;"><img alt="" src='img/zb2.png' onclick="capturaAcaoJogador(1);" /></span>
@@ -1218,7 +1219,7 @@ and open the template in the editor.
 
 
 
-                    <table border="1" cellspacing="0" cellpadding="0" id="grade6" style="display:none;" class="grade6">
+                    <table border="0" cellspacing="0" cellpadding="0" id="grade6" style="display:none;" class="grade6">
                         <tr>
                             <td>
                                 <span id="espaco6z1">&nbsp;</span>
@@ -2164,10 +2165,12 @@ and open the template in the editor.
                 </div>
 
                 <div class="subTela3">
-                    sub tela 3 - subtela auxiliar rodapé
-                    <br/><br/>
-                    descrição do jogo...
-                    <br/>
+                    <!-- 
+						sub tela 3 - subtela auxiliar rodapé 
+						<br/><br/>
+						descrição do jogo...
+						<br/>
+					-->
                     <input type="button" id="btnInicioJogo" value="Inicio"  />
                     <input type="button" id="btnArregarNoJogo" value="Quero Arregar!" style="display: none;" />
                     <input type="button" id="btnMatarZumbis" value="Matar Zumbis" />
