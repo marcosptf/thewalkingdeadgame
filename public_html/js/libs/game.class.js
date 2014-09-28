@@ -75,7 +75,7 @@ function mostraZumbiRandom() {
     //YUI().use("node",function(YHtml){
     //    YHtml.one("#idFase").setHTML("jsDebugger => Fase=>"+faseGradeJogador+" Temp=>"+temporizadorGame+" QtdePontos=>"+qtdePontosJogador);
     //});					
-    document.getElementById("idFase").innerHTML = " Fase=>" + faseGradeJogador + " Tempo=>" + temporizadorGame + "  Pontos=>" + pontosJogador;
+    document.getElementById("idFase").innerHTML = " Fase:" + faseGradeJogador + " Tempo:" + temporizadorGame + "  Pontos:" + pontosJogador;
     console.debug("jsDebugger => Fase=>" + faseGradeJogador + " Temp=>" + temporizadorGame + " QtdePontos=>" + pontosJogador);
 
     if (
