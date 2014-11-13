@@ -1,7 +1,7 @@
 /*******************************************************************************
  * @author:marcosptf@yahoo.com.br
  * @since:19/09/2013
- * @desc:definições das propriedades usadas no game
+ * @desc:definicoes das propriedades usadas no game
  * Rotinas do carrossel
  ********************************************************************************/
 
