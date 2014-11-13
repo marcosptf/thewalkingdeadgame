@@ -1,7 +1,7 @@
 /*******************************************************************************
  * @author:marcosptf@yahoo.com.br
  * @since:19/09/2013
- * @desc:atribuição dos elementos html nas propriedades do jogo com YUI();
+ * @desc:atribuicao dos elementos html nas propriedades do jogo com YUI();
  ********************************************************************************/
 
 function processaImagemUsada(imagemSupostamenteUsada){
@@ -75,9 +75,8 @@ function mostraZumbiRandom() {
     //YUI().use("node",function(YHtml){
     //    YHtml.one("#idFase").setHTML("jsDebugger => Fase=>"+faseGradeJogador+" Temp=>"+temporizadorGame+" QtdePontos=>"+qtdePontosJogador);
     //});					
-    document.getElementById("idFase").innerHTML = " Fase:" + faseGradeJogador + " Tempo:" + temporizadorGame + "  Pontos:" + pontosJogador;
     console.debug("jsDebugger => Fase=>" + faseGradeJogador + " Temp=>" + temporizadorGame + " QtdePontos=>" + pontosJogador);
-
+	document.getElementById("idFase").innerHTML = " Fase:" + faseGradeJogador + " Tempo:" + temporizadorGame + "  Pontos:" + pontosJogador;		
     if (
             (faseGradeJogador === 0) && (temporizadorGame === 5) ||
             (faseGradeJogador === 1) && (temporizadorGame === 10) ||
@@ -86,10 +85,9 @@ function mostraZumbiRandom() {
             (faseGradeJogador === 4) && (temporizadorGame === 40) ||
             (faseGradeJogador === 5) && (temporizadorGame === 50)
             ) {
-        fimDeFase();
-        console.log("você não conseguiu matar os zumbis a tempo! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame);
-        alert("você não conseguiu matar os zumbis a tempo! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame+" temposizadorMilisegundos=>"+temporizadorMilisegundos);
-        return voltaParaCarrossel();
+			
+		return fimDeFase();
+        //return voltaParaCarrossel();
     }
 
     if (faseGradeJogador === 0) {
@@ -204,6 +202,30 @@ function capturaAcaoJogador(idQuadro) {
 }
 
 function fimDeFase() {
+	/* 
+		#adicionar na function fimDeFase();, opcao para verificar se a constante AMBIENTE="dev",
+		mostrar alert com os debugs, mas se for AMBIENTE="prod" exibir a imagem bg5 com a mensagem 
+		parecida com a do alert com os pontos, fase e tempo, com um botao para voltar ao inicio.
+	*/	
     tempJogo = window.clearInterval(tempJogo);
-    imagemUsadaGame   = new Array();
+    imagemUsadaGame = new Array();
+	divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage5+"')");	
+	for(var x=1;x<qtdeImg[faseGradeJogador];x++){
+		document.getElementById('grade'+faseGradeJogador+'z'+x).style.display = 'none';
+		document.getElementById('dead'+faseGradeJogador+'z'+x).style.display = 'none';
+	}
+	grade0.setStyle("display", "none");
+	grade1.setStyle("display", "none");
+	grade2.setStyle("display", "none");
+	grade3.setStyle("display", "none");
+	grade4.setStyle("display", "none");
+	grade5.setStyle("display", "none");
+	grade6.setStyle("display", "none");
+	btnArregarNoJogo.setStyle("display", "none");	
+	btnInicioJogo.setStyle("display", "block");	
+	subTela2.setStyle("cursor","pointer");
+    alert("debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame+" temposizadorMilisegundos=>"+temporizadorMilisegundos);
+	document.getElementById("idFase2").innerHTML = " Fase:" + faseGradeJogador + " Tempo:" + temporizadorGame + "  Pontos:" + pontosJogador;		
+	document.getElementById("idFase3").innerHTML = "Voce nao conseguiu matar os zumbis a tempo, ainda nao esta preparado para o fim.";			
+	btnArregarNoJogo.setStyle("display", "block");
 }
