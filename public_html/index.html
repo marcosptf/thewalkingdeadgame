@@ -25,22 +25,24 @@
     </head>
     
     <body>
-        <div id="divPrincipal" class="layout">
+        <div id="divPrincipal" class="">
 
             <!-- tela abertura  -->
-            <div id="telaInicial" class="layout1" style="display:block;">
+            <div id="telaInicial" class="">
                 <br/><br/>
                 <a href="javascript:;"><img src="img/zb15.png" id='btnInicio' alt="Matar Zumbis" /></a>
                 <br/><br/>
             </div>
 
             <!-- tela inicial do jogo puzzle  -->
-            <div id="tela1" class="layout2" style="display:none;">
+            <div id="tela1" class="" style="display:none;">
 
                 <div class="subTela2" id="subTela2">
                     <!-- sub tela 2 - subtela do jogo - -->
-					<span id="idFase"></span>                
-
+					<span id="idFase"></span><span id="idFase2" class="fasefinal"></span>                
+					<br/><br/>
+					<span id="idFase3" class="fasefinal"></span>					
+					
                     <table border="0" cellspacing="0" cellpadding="0" id="grade0" style="display:none;" class="grade0">
                         <tr>
                             <td>
@@ -1196,7 +1198,7 @@
                             </td>
                             <td>
                                 <span id="grade5z180" style="display:none;"><img alt="" src='img/zb13.png' onclick="capturaAcaoJogador(180);" /></span>
-                                <span id="deadz180"  style="display:none;"><img alt="" src='img/zombieDead1.png' /> </span>
+                                <span id="dead5z180"  style="display:none;"><img alt="" src='img/zombieDead1.png' /> </span>
                             </td>
                         </tr>
                     </table>
@@ -2153,11 +2155,7 @@
                     <input type="button" id="btnArregarNoJogo" value="Quero Arregar!" style="display: none;" />
                     <input type="button" id="btnMatarZumbis" value="Matar Zumbis" />
                 </div>
-
             </div>
-
         </div>
-
     </body>
-    
 </html>
