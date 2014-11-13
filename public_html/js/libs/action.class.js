@@ -1,7 +1,7 @@
 /*******************************************************************************
  * @author:marcosptf@yahoo.com.br
  * @since:19/09/2013
- * @desc:definições das propriedades usadas no game
+ * @desc:definicoes das propriedades usadas no game
  ********************************************************************************/
 YUI().use("node", function(Y) {
 
@@ -27,7 +27,6 @@ YUI().use("node", function(Y) {
     btnMatarZumbis.setStyle("background-image", "url('"+BGImagePath+BGImage3+"')");
 
     btnInicioJogo2.on("click", function(e) {
-        divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage4+"')");
         location.reload();
     });
 
@@ -37,8 +36,6 @@ YUI().use("node", function(Y) {
     });
 
     btnArregarNoJogo.on("click", function(e) {
-        /* voltaParaCarrossel(); */
-        divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage4+"')");
         location.reload();		
     });
 
