@@ -17,6 +17,7 @@
 }
 
 .layout1{
+    top:25px;	
     background-image:url('http://127.0.0.1/thewalkingdeadgame-master/public_html/img/bg/bg3.png');
     background-repeat:no-repeat;
     background-attachment:fixed;
@@ -25,12 +26,14 @@
 }	
 
 .layout2{
+    top:25px;
     background-image:url('http://127.0.0.1/thewalkingdeadgame-master/public_html/img/bg/bg1.png');
     background-repeat:no-repeat;
     background-attachment:fixed;
     height: 500px;
     width: 600px;
 }
+
 
 .pointerCSS{
     cursor:url(smiley.gif),url(myBall.cur),auto;
