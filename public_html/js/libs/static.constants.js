@@ -47,7 +47,9 @@ var     btnInicioJogo,
         noArmaFogo1              = "/noArma1.png",
         noArmaFogo2              = "/noArma2.png",
         imagemUsadaGame          = new Array(),
-        temporizadorMilisegundos = 1400;
+        temporizadorMilisegundos = 1400,
+		//AMBIENTE                 = "prod",
+		AMBIENTE                 = "dev";
 
 var qtdeImg    = new Array();
     qtdeImg[0] = 4;
