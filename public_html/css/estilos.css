@@ -1,7 +1,7 @@
 /*******************************************************************************
 * @author:marcosptf@yahoo.com.br
 * @since:19/09/2013
-* @desc:definições das propriedades usadas no game
+* @desc:definicoes das propriedades usadas no game
 ********************************************************************************/
 
 /* estilo dos layouts */
@@ -11,16 +11,25 @@
     height:500px;
     position:relative;
     top:25px;
-/*    background-image:url('file:///home/deployer/thewalkingdeadgame/public_html/img/bg/bg3.jpg');*/
+    /* background-image:url('img/bg/bg3.png');
     background-repeat:no-repeat;
-    /* background-attachment:fixed; */
+    background-attachment:fixed; */
 }
 
 .layout1{
+    background-image:url('http://127.0.0.1/thewalkingdeadgame-master/public_html/img/bg/bg3.png');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    height: 500px;
+    width: 600px;
+}	
 
-}
 .layout2{
-
+    background-image:url('http://127.0.0.1/thewalkingdeadgame-master/public_html/img/bg/bg1.png');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    height: 500px;
+    width: 600px;
 }
 
 .pointerCSS{
