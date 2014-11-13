@@ -21,12 +21,14 @@ function calculaImagemUsadaNoGamePorFase(){
     var imagemRandomica;
     
     for(var x = 0; x<=qtdeImg[faseGradeJogador];x++){
-        imagemRandomica = geraImagemRandomica();
-        if(!processaImagemUsada(imagemRandomica)){
-            console.log("imagem randomica gerada ñ existia =>"+imagemRandomica);
+        imagemRandomica = geraImagemRandomica();printString("img randomica gerada=>"+imagemRandomica);
+        if(!processaImagemUsada(imagemRandomica)){ 
+            printString("imagem randomica gerada ñ existia =>"+imagemRandomica);
             imgZumbiAtual = imagemRandomica;
             return imagemRandomica;
         }
+		printString("img randomica gerada ñ valida =>"+imagemRandomica);
+		return 0;
     }
 }
 
@@ -34,13 +36,14 @@ function calculaImagemUsadaNoGamePorFase(){
 function exibeIMGGame() {
     YUI().use("node", function(Y) {
         
-        pzbImg = calculaImagemUsadaNoGamePorFase();
+		imgGame = calculaImagemUsadaNoGamePorFase();
+        pzbImg = ((imgGame>0) ? (imgGame) : (calculaImagemUsadaNoGamePorFase()));
         
         for (var x = 1; x <= qtdeImg[faseGradeJogador]; x++) {
             Y.one("#grade" + faseGradeJogador + "z" + x).setStyle("display", "none");
         }
-//                        for(var x=1;x<=pQtdeImg;x++){Y.one("#dead"+faseGradeJogador+"z"+x).setStyle("display","none");}
-        console.log("habilitando zumbi na ==> #grade" + faseGradeJogador + "z" + pzbImg);
+//      for(var x=1;x<=pQtdeImg;x++){Y.one("#dead"+faseGradeJogador+"z"+x).setStyle("display","none");}
+        printString("habilitando zumbi na ==> #grade" + faseGradeJogador + "z" + pzbImg);
         Y.one("#grade" + faseGradeJogador + "z" + pzbImg).setStyle("display", "block");
     });
 }
@@ -75,7 +78,7 @@ function mostraZumbiRandom() {
     //YUI().use("node",function(YHtml){
     //    YHtml.one("#idFase").setHTML("jsDebugger => Fase=>"+faseGradeJogador+" Temp=>"+temporizadorGame+" QtdePontos=>"+qtdePontosJogador);
     //});					
-    console.debug("jsDebugger => Fase=>" + faseGradeJogador + " Temp=>" + temporizadorGame + " QtdePontos=>" + pontosJogador);
+    printString("jsDebugger => Fase=>" + faseGradeJogador + " Temp=>" + temporizadorGame + " QtdePontos=>" + pontosJogador);
 	document.getElementById("idFase").innerHTML = " Fase:" + faseGradeJogador + " Tempo:" + temporizadorGame + "  Pontos:" + pontosJogador;		
     if (
             (faseGradeJogador === 0) && (temporizadorGame === 5) ||
@@ -86,7 +89,7 @@ function mostraZumbiRandom() {
             (faseGradeJogador === 5) && (temporizadorGame === 50)
             ) {
 			
-		return fimDeFase();
+		return fimDeFaseJogadorPerdeu();
         //return voltaParaCarrossel();
     }
 
@@ -148,7 +151,7 @@ function mostraZumbiRandom() {
 
 
 function capturaAcaoJogador(idQuadro) {
-    console.log("idQuadro =>" + idQuadro);
+    printString("idQuadro =>" + idQuadro);
     if (imgZumbiAtual === idQuadro) {
         pontosJogador += 10;
         qtdePontosJogador++;
@@ -157,14 +160,16 @@ function capturaAcaoJogador(idQuadro) {
             //deve retirar a imagem do zumbi e colocar a imagem de alvo acertado;
             Y.one("#grade" + faseGradeJogador + "z" + idQuadro).setStyle("display", "none");//trocar chamada de funcao
             Y.one("#dead" + faseGradeJogador + "z" + idQuadro).setStyle("display", "block");// zombieDead1.jpg
-            console.debug("habilita imagem zombie morto");
+            printString("habilita imagem zombie morto");
         });
     }
-    console.debug("acao apos habilitar zombie morto");
-    if ((qtdePontosJogador === qtdeImg[faseGradeJogador]) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 1)) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 2)) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 3))) {
-//                if((qtdePontosJogador === qtdeImg[faseGradeJogador]) || (qtdePontosJogador === (qtdeImg[faseGradeJogador] - 1))){
-        console.debug("js=> qtdePontosJogador=>" + qtdePontosJogador + " qtdeImagemNaFase=>" + qtdeImg[faseGradeJogador]);
-
+    printString("acao apos habilitar zombie morto");
+    if (
+			(qtdePontosJogador === qtdeImg[faseGradeJogador]) || 
+			(qtdePontosJogador === (qtdeImg[faseGradeJogador] - 1)) || 
+			(qtdePontosJogador === (qtdeImg[faseGradeJogador] - 2)) || 
+			(qtdePontosJogador === (qtdeImg[faseGradeJogador] - 3))) {
+			
         msg1 = "jogador finalizou o jogo! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame;
         msg2 = "jogador finalizou a fase! debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame+" temposizadorMilisegundos=>"+temporizadorMilisegundos;
         if (
@@ -174,40 +179,20 @@ function capturaAcaoJogador(idQuadro) {
                 (faseGradeJogador === 3 && pontosJogador >= 480) ||
                 (faseGradeJogador === 4 && pontosJogador >= 760)
                 ) {
-            console.debug("js=>1");
-
-            /* para o processamento do temporizador do jogo */
-            fimDeFase();
-            console.log(msg2);
-            alert(msg2);
-//            temporizadorMilisegundos -=500;
-            temporizadorMilisegundos = ((temporizadorMilisegundos > 1000) ? (temporizadorMilisegundos-400) : (temporizadorMilisegundos-200));
-            faseGradeJogador++;
-            temporizadorGame = 0;
-            qtdePontosJogador = 0;
-            iniciaJogo();
-
+            fimDeFase(msg2);
         } else if (faseGradeJogador === 5 && pontosJogador >= 2600) {
-
-            /* para o processamento do temporizador do jogo */
-            fimDeFase();
-            console.log(msg1);
-            alert(msg1);
-            exibeCarrossel();
-            console.debug("js=>2");
+            fimDeFase(msg1);
         }
     }
-    console.debug("js=>3");
     return true;
 }
 
-function fimDeFase() {
+function fimDeFaseJogadorPerdeu(){
 	/* 
 		#adicionar na function fimDeFase();, opcao para verificar se a constante AMBIENTE="dev",
 		mostrar alert com os debugs, mas se for AMBIENTE="prod" exibir a imagem bg5 com a mensagem 
 		parecida com a do alert com os pontos, fase e tempo, com um botao para voltar ao inicio.
 	*/	
-    tempJogo = window.clearInterval(tempJogo);
     imagemUsadaGame = new Array();
 	divPrincipal.setStyle("backgroundImage", "url('"+BGImagePath+BGImage5+"')");	
 	for(var x=1;x<qtdeImg[faseGradeJogador];x++){
@@ -224,8 +209,27 @@ function fimDeFase() {
 	btnArregarNoJogo.setStyle("display", "none");	
 	btnInicioJogo.setStyle("display", "block");	
 	subTela2.setStyle("cursor","pointer");
-    alert("debug=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame+" temposizadorMilisegundos=>"+temporizadorMilisegundos);
+    printString("debug fim de fase=>  pontos=>" + pontosJogador + " fase=>" + faseGradeJogador + " tempo=>" + temporizadorGame+" temposizadorMilisegundos=>"+temporizadorMilisegundos);
 	document.getElementById("idFase2").innerHTML = " Fase:" + faseGradeJogador + " Tempo:" + temporizadorGame + "  Pontos:" + pontosJogador;		
 	document.getElementById("idFase3").innerHTML = "Voce nao conseguiu matar os zumbis a tempo, ainda nao esta preparado para o fim.";			
 	btnArregarNoJogo.setStyle("display", "block");
+    window.clearTimeout(tempJogo);
+    window.mozCancelAnimationFrame(tempJogo);
+	return window.clearInterval(tempJogo);
+}
+
+function fimDeFase(msg){
+	printString(msg2);
+	temporizadorMilisegundos = ((temporizadorMilisegundos > 1000) ? (temporizadorMilisegundos-200) : (temporizadorMilisegundos-300));
+	faseGradeJogador++;
+	temporizadorGame = 0;
+	qtdePontosJogador = 0;
+	iniciaJogo();
+}
+
+function printString(str){
+	if(AMBIENTE=="dev"){
+		//alert(str);
+		console.debug(str);
+	}
 }
