@@ -40,7 +40,7 @@ YUI().use("node", function(Y) {
     });
 
 //    btnCreditos.on("click", function(e) {
-//        console.log("clicou no botao de creditos");
+//        printString("clicou no botao de creditos");
 //    });
 
     btnMatarZumbis.on("click", function(e) {
